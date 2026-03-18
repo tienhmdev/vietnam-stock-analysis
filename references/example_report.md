@@ -107,7 +107,56 @@ Below is a complete example of the visually rich technical analysis report. Use 
 
 ---
 
-## 4. 💡 Nhận Định & Khuyến Nghị
+## 4. 🌐 Bối Cảnh Thị Trường & Tin Tức
+
+> Dữ liệu được tổng hợp từ web search thực hiện ngày **2026-03-15**. Kết quả phản ánh thông tin gần nhất tìm được tại thời điểm phân tích.
+
+### 🇻🇳 Thị Trường Trong Nước Hôm Nay
+
+| Yếu tố | Trạng thái | Chi tiết | Nguồn |
+|:---|:---:|:---|:---|
+| **VNIndex** | 🟢 | Tăng +8.3 điểm (+0.64%) lên 1,298.7 — phục hồi sau phiên giảm trước | CafeF |
+| **Khối ngoại** | 🟡 | Bán ròng nhẹ ~85 tỷ đồng trên HOSE; tập trung bán VHM, HPG | VnEconomy |
+| **Thanh khoản TT** | 🟢 | Tổng GTGD HOSE đạt 18,400 tỷ đồng — trên TB 20 phiên | SSI Research |
+| **Tâm lý chung** | 🟢 | Nhà đầu tư thận trọng nhưng tích cực; dòng tiền nhỏ lẻ mạnh | VietStock |
+
+### 🌍 Yếu Tố Thế Giới
+
+| Yếu tố thế giới | Trạng thái | Giá trị | Tác động đến TTCK VN | Nguồn |
+|:---|:---:|:---:|:---:|:---|
+| **S&P 500** | 🟢 | +0.82% | 🟢 Hỗ trợ tâm lý tích cực | Reuters |
+| **Nasdaq Composite** | 🟢 | +1.10% — tech dẫn sóng | 🟢 Thuận lợi cho nhóm IT/tech | Bloomberg |
+| **USD Index (DXY)** | 🟡 | 103.4 — ổn định | 🟡 Trung tính với tỷ giá VND | Investing.com |
+| **Giá dầu WTI** | 🟡 | $78.2/thùng — đi ngang | 🟡 Ít ảnh hưởng nhóm công nghệ | MarketWatch |
+| **Lãi suất Fed** | 🟢 | Giữ 5.25% — kỳ vọng cắt Q3/2026 | 🟢 Tích cực cho dòng vốn EM | Fed Statement |
+
+> **Phân tích ngành FPT (Công nghệ):** Nasdaq tăng mạnh hỗ trợ kỳ vọng định giá cho nhóm tech toàn cầu, gián tiếp nâng khẩu vị rủi ro nhà đầu tư với cổ phiếu công nghệ Việt. DXY ổn định giúp giảm áp lực tỷ giá, khuyến khích khối ngoại duy trì vị thế ở các thị trường mới nổi như Việt Nam. Fed dovish là yếu tố hỗ trợ trung hạn cho toàn bộ thị trường EM.
+
+### 📰 Tin Tức Nổi Bật về FPT
+
+| Tin tức | Ngày | Mức ảnh hưởng | Nguồn |
+|:---|:---:|:---:|:---|
+| FPT ký hợp đồng AI với tập đoàn Nhật Bản trị giá 200 triệu USD | 14/03 | 🟢 Tích cực | Tuổi Trẻ |
+| Cổ phiếu FPT được nâng khuyến nghị lên "Outperform" từ VCBS | 13/03 | 🟢 Tích cực | VCBS Research |
+| FPT Software tuyển dụng thêm 2,000 kỹ sư AI trong Q2/2026 | 12/03 | 🟡 Trung tính | VnExpress |
+| Khối ngoại mua ròng FPT liên tục 3 phiên (+45 tỷ/phiên) | 15/03 | 🟢 Tích cực | CafeF |
+
+### 🔗 Tổng Hợp Tác Động
+
+| Chiều tác động | Đánh giá | Chi tiết |
+|:---|:---:|:---|
+| **Trong nước** | 🟢 TAILWIND | VNIndex phục hồi + tin tức FPT tích cực + khối ngoại mua ròng mã |
+| **Thế giới** | 🟢 TAILWIND | Nasdaq tăng + DXY ổn định + Fed dovish → thuận lợi cho nhóm tech EM |
+
+| | |
+|:---|:---|
+| **Tín hiệu tổng thể** | 🟢 **TAILWIND KÉP — Trong nước & thế giới cùng hỗ trợ** |
+| **Độ hội tụ** | ⭐ Kỹ thuật **BULLISH** + Trong nước **TÍCH CỰC** + Thế giới **THUẬN LỢI** → Độ tin cậy **rất cao** |
+| **Rủi ro cần theo dõi** | Fed thay đổi lập trường; biến động DXY mạnh có thể kích hoạt bán ròng khối ngoại |
+
+---
+
+## 5. 💡 Nhận Định & Khuyến Nghị
 
 ### ⚡ Scorecard
 
@@ -116,11 +165,12 @@ Below is a complete example of the visually rich technical analysis report. Use 
 | Xu hướng | ⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜ **8/10** | 🟢 Bullish — trên tất cả MA |
 | Momentum | ⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜ **7/10** | 🟢 MACD dương, RSI ok |
 | Dòng tiền | ⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜ **7/10** | 🟢 Volume tăng dần |
+| Yếu tố ngoài | ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜ **9/10** | 🟢 Tin tức + khối ngoại cùng chiều |
 | Rủi ro | ⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜ **3/10** | 🟢 Rủi ro thấp |
 
 | | |
 |:---|:---|
-| **Điểm tổng** | ⭐⭐⭐⭐☆ **(4/5)** |
+| **Điểm tổng** | ⭐⭐⭐⭐⭐ **(5/5)** |
 | **Khuyến nghị** | 🟢 **MUA / TÍCH LŨY** |
 
 ### 🔔 Điều kiện kích hoạt

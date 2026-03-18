@@ -22,17 +22,33 @@ Always follow this procedure to ensure accuracy:
 2.  **Read and Pre-process:**
     Read the generated JSON file in the `stock-data/` directory (e.g., `stock-data/fpt_data.json`).
 
-3.  **Technical Analysis (AI-driven):**
+3.  **Search External Market Context (Real-Time Web Search):**
+    Before running technical analysis, use the `search_web` tool to gather today's external factors. Run **all seven** of the following searches:
+
+    🇻🇳 **Thị trường trong nước:**
+    - `tin tức [SYMBOL] hôm nay` — Latest news about the company
+    - `cổ phiếu [SYMBOL] phân tích` — Market analysts' view on the stock
+    - `VNIndex hôm nay` — Overall market sentiment (VNIndex)
+    - `khối ngoại mua bán hôm nay` — Foreign investor buy/sell activity
+
+    🌍 **Yếu tố thế giới:**
+    - `chứng khoán Mỹ S&P500 Dow Jones hôm nay` — US equity market direction (leading indicator for Asian markets)
+    - `tỷ giá USD DXY hôm nay` — USD strength, directly affects VND and foreign capital flows
+    - `giá dầu thế giới hôm nay` — Crude oil price, broad macro risk signal
+
+    Collect the key findings (headlines, sentiment, notable events) to enrich the analysis with real-world context. Prioritize content from the **current date**; if today's data is unavailable, use the most recent available. Note the source and date of each finding.
+
+4.  **Technical Analysis (AI-driven):**
     Analyze key indicators from the raw data:
     - **Trends (Moving Averages):** MA5, MA20 (short-term), MA50, MA90 (medium-term), MA120, MA200 (long-term).
     - **Momentum:** MACD (Histogram, Signal), RSI (Overbought/Oversold).
     - **Volume:** Compare current volume with the 20-session average to confirm money flow.
     - **Support/Resistance:** Identify key price levels based on historical volatility.
 
-4.  **Synthesize Findings:**
-    Provide a concise but meaningful assessment for each criterion.
+5.  **Synthesize Findings:**
+    Provide a concise but meaningful assessment for each criterion. Integrate the external context from Step 3 into the final assessment — note whether news sentiment reinforces or contradicts the technical signals.
 
-5.  **Present & Save Report:**
+6.  **Present & Save Report:**
     - **Present:** Display the full report directly to the user in the conversation.
     - **Save:** Also save the report as a Markdown file in the `reports/` directory (create it if it doesn't exist) with the naming convention:
       ```
@@ -56,8 +72,14 @@ Always follow this procedure to ensure accuracy:
 
 **Section 3: Vùng Hỗ Trợ và Kháng Cự 🗺️** — A price ladder table with columns: Mức giá / Loại (🔵/🔴/🟠/🟢/⭐) / Mô tả / Khoảng cách (%). Mark current price with ★. Sort from highest to lowest.
 
-**Section 4: Nhận Định và Khuyến Nghị 💡** — Include:
-- A scorecard table rating: Xu hướng, Momentum, Dòng tiền, Rủi ro (each /10) using ⬛/⬜ block characters as progress bars.
+**Section 4: 🌐 Bối Cảnh Thị Trường & Tin Tức** — This section presents real-time external findings gathered in Step 3. Structure it as:
+- **Tổng quan thị trường trong nước:** A table summarizing VNIndex status + khối ngoại activity (Yếu tố / Trạng thái 🔴/🟡/🟢 / Chi tiết / Nguồn).
+- **🌍 Yếu Tố Thế Giới:** A table covering global macro signals: US market (S&P500/Dow), USD/DXY rate, and oil price. Columns: Yếu tố thế giới / Trạng thái / Giá trị / Tác động đến TTCK VN 🔴/🟡/🟢 / Nguồn. After the table, add a short analysis of how these global factors specifically affect [SYMBOL]'s sector (e.g., tech, banking, commodities).
+- **Tin tức nổi bật về [SYMBOL]:** A table of key headlines (Tin tức / Ngày / Mức ảnh hưởng 🔴/🟡/🟢 / Nguồn).
+- **Tổng hợp tác động:** A summary table with two rows — Domestic context and Global context — each rated TAILWIND 🟢, NEUTRAL 🟡, or HEADWIND 🔴. End with an overall external signal verdict and confidence note.
+
+**Section 5: Nhận Định và Khuyến Nghị 💡** — Include:
+- A scorecard table rating: Xu hướng, Momentum, Dòng tiền, Yếu tố ngoài, Rủi ro (each /10) using ⬛/⬜ block characters as progress bars. *("Yếu tố ngoài" is scored based on news/market context from Section 4.)*
 - If BUY: a trigger checklist table (✅/⬜ conditions) and a trade plan table (Vùng mua / Chốt lời / Cắt lỗ / R:R Ratio). Add a reasoning table.
 - If SELL/HOLD: clearly state reasons and conditions to reassess.
 
@@ -95,5 +117,6 @@ If the script fails or produces unexpected results, follow these steps:
 - **Out-of-scope request** (e.g., fundamental analysis, news, earnings): Politely clarify that this skill only covers technical analysis (TA). Suggest external resources for fundamental analysis (FA).
 
 ## Important Notes
-- Purely technical analysis; does not include news or fundamental analysis (FA).
+- Combines **technical analysis** with **real-time external context** (news, VNIndex, foreign investor activity) for a more complete picture.
+- News search is performed on each run — results reflect the current date. Source titles and URLs are included in the report for transparency.
 - Always remind the user that this is for reference only and not financial investment advice.
