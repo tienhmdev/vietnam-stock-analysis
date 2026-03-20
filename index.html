@@ -27,13 +27,116 @@
 
         <!-- ─── HERO / BANNER ──────────────────── -->
         <section class="hero">
-            <h1>AI Skill phân tích kỹ thuật<br>chứng khoán Việt Nam</h1>
+            <div class="hero-stats">1,000+ installs</div>
+            <h1><span class="gradient-text typing-text">Agent Skill</span> phân tích kỹ thuật<br>chứng khoán Việt Nam</h1>
+            
+            <div class="compatible-platforms">
+                <div class="platform-list-container">
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://ampcode.com/"><img alt="AMP" loading="lazy" class="platform-img" src="https://skills.sh/agents/amp.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://antigravity.google/"><img alt="Antigravity" loading="lazy" class="platform-img" src="https://skills.sh/agents/antigravity.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://claude.com/product/claude-code"><img alt="Claude Code" loading="lazy" class="platform-img" src="https://skills.sh/agents/claude-code.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://clawd.bot/"><img alt="ClawdBot" loading="lazy" class="platform-img" src="https://skills.sh/agents/clawdbot.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://cline.bot/"><img alt="Cline" loading="lazy" class="platform-img" src="https://skills.sh/agents/cline.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://openai.com/codex"><img alt="Codex" loading="lazy" class="platform-img" src="https://skills.sh/agents/codex.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://cursor.sh"><img alt="Cursor" loading="lazy" class="platform-img" src="https://skills.sh/agents/cursor.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://factory.ai"><img alt="Droid" loading="lazy" class="platform-img" src="https://skills.sh/agents/droid.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://gemini.google.com"><img alt="Gemini" loading="lazy" class="platform-img" src="https://skills.sh/agents/gemini.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://github.com/features/copilot"><img alt="GitHub Copilot" loading="lazy" class="platform-img" src="https://skills.sh/agents/copilot.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://block.github.io/goose"><img alt="Goose" loading="lazy" class="platform-img" src="https://skills.sh/agents/goose.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://kilo.ai/"><img alt="Kilo" loading="lazy" class="platform-img" src="https://skills.sh/agents/kilo.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://kiro.dev/cli"><img alt="Kiro CLI" loading="lazy" class="platform-img" src="https://skills.sh/agents/kiro-cli.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://nousresearch.com/"><img alt="Nous Research" loading="lazy" class="platform-img" src="https://skills.sh/agents/nous-research.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://opencode.ai/"><img alt="OpenCode" loading="lazy" class="platform-img" src="https://skills.sh/agents/opencode.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://roocode.com/"><img alt="Roo" loading="lazy" class="platform-img" src="https://skills.sh/agents/roo.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://www.trae.ai/"><img alt="Trae" loading="lazy" class="platform-img" src="https://skills.sh/agents/trae.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://code.visualstudio.com/"><img alt="VSCode" loading="lazy" class="platform-img" src="https://skills.sh/agents/vscode.svg"></a>
+                    <a target="_blank" rel="noopener noreferrer" class="platform-item" href="https://codeium.com/windsurf"><img alt="Windsurf" loading="lazy" class="platform-img" src="https://skills.sh/agents/windsurf.svg"></a>
+                </div>
+            </div>
             <p>Cài đặt một lần, phân tích mọi mã. Dữ liệu thực từ HOSE · HNX · UPCOM.</p>
 
             <div class="install-box" id="install-cmd">
                 <span class="prompt">$</span>
                 <span class="cmd">npx skills add https://github.com/tienhmdev/vietnam-stock-analysis --skill vietnam-stock-analysis</span>
-                <button class="copy-btn" id="copy-btn" onclick="copyCmd()" title="Copy command">Copy</button>
+                <button class="copy-btn" onclick="copyToClipboard(event)">Copy</button>
+            </div>
+
+            <div class="usage-tip">
+                Hỏi Agent: <span class="typing-usage">"Phân tích mã FPT hôm nay"</span>
+            </div>
+
+            <!-- Buy Zone Recommendation Widget -->
+            <div class="rec-widget first-card">
+                <div class="rec-header">Khuyến nghị vùng mua tiềm năng</div>
+                <div class="rec-table-container">
+                    <table class="rec-table">
+                        <thead>
+                            <tr>
+                                <th>Tiêu chí</th>
+                                <th class="objective">Mục tiêu 1 🎯</th>
+                                <th class="objective">Mục tiêu 2 🚀</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vùng mua</td>
+                                <td class="buy-val">126,000 – 128,500</td>
+                                <td class="buy-val">126,000 – 128,500</td>
+                            </tr>
+                            <tr>
+                                <td>Chốt lời</td>
+                                <td class="tp-val">135,000 <small>(+5.1%)</small></td>
+                                <td class="tp-val">142,000 <small>(+10.5%)</small></td>
+                            </tr>
+                            <tr>
+                                <td>Cắt lỗ</td>
+                                <td class="sl-val">123,000 <small>(-4.3%)</small></td>
+                                <td class="sl-val">120,000 <small>(-6.6%)</small></td>
+                            </tr>
+                            <tr>
+                                <td>R:R Ratio</td>
+                                <td class="rr-val">1.2 : 1</td>
+                                <td class="rr-val">1.6 : 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Market Context & News Card -->
+            <div class="rec-widget">
+                <div class="rec-header">🌐 Bối cảnh thị trường & Tin tức</div>
+                <div class="rec-table-container">
+                    <table class="rec-table">
+                        <thead>
+                            <tr>
+                                <th>Yếu tố</th>
+                                <th style="text-align: center;">Trạng thái</th>
+                                <th>Chi tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>VNIndex</td>
+                                <td style="text-align: center;"><span class="status-dot green"></span></td>
+                                <td>Tăng +8.3 điểm, thanh khoản tốt.</td>
+                            </tr>
+                            <tr>
+                                <td>Thế giới</td>
+                                <td style="text-align: center;"><span class="status-dot green"></span></td>
+                                <td>S&P 500 & Nasdaq tăng điểm tích cực.</td>
+                            </tr>
+                            <tr>
+                                <td>Tin tức mã này</td>
+                                <td style="text-align: center;"><span class="status-dot green"></span></td>
+                                <td>Ký hợp đồng AI lớn với đối tác Nhật Bản.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rec-footer-tip">
+                    Tín hiệu tổng thể: <strong>TAILWIND KÉP</strong> — Trong nước & thế giới cùng hỗ trợ.
+                </div>
             </div>
         </section>
 
@@ -181,12 +284,17 @@
     </footer>
 
     <script>
-        function copyCmd() {
+        function copyToClipboard(event) {
             const cmd = 'npx skills add https://github.com/tienhmdev/vietnam-stock-analysis --skill vietnam-stock-analysis';
             navigator.clipboard.writeText(cmd).then(() => {
-                const btn = document.getElementById('copy-btn');
+                const btn = event ? event.target : document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
                 btn.textContent = 'Copied!';
-                setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+                btn.style.background = '#222';
+                setTimeout(() => { 
+                    btn.textContent = originalText; 
+                    btn.style.background = '';
+                }, 2000);
             });
         }
     </script>

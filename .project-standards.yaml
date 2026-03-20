@@ -1,0 +1,6 @@
+standards_version: "2025.1"
+last_configured: "2026-03-20T10:45:00Z"
+components:
+  github-pages: "2025.1"
+  github-pages-generator: "static"
+  github-pages-source: "./"
