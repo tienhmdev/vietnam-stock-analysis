@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #0a0a0a;
+    --text-muted: #555555;
+    --border: #e0e0e0;
+    --code-bg: #0a0a0a;
+    --code-text: #f0f0f0;
+    --accent: #0a0a0a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ─── HEADER ─────────────────────────────────── */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.header-left a:hover {
+    opacity: 0.6;
+}
+
+.header-left svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ─── HERO / BANNER ───────────────────────────── */
+.hero {
+    padding: 80px 2rem 72px;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Install command box */
+.install-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--code-bg);
+    color: var(--code-text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.install-box .prompt {
+    color: #666;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.install-box .cmd {
+    flex: 1;
+    min-width: 0;
+}
+
+.copy-btn {
+    background: none;
+    border: 1px solid #444;
+    color: var(--code-text);
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.copy-btn:hover {
+    background: #222;
+}
+
+/* ─── DIVIDER ─────────────────────────────────── */
+.divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+/* ─── SAMPLE REPORT ───────────────────────────── */
+.sample-section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 2rem;
+}
+
+.sample-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sample-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* Markdown-style report */
+.report {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.report-header {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 0.75rem 1.25rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.report-dot { width: 10px; height: 10px; border-radius: 50%; }
+.report-dot.red { background: #ff5f57; }
+.report-dot.yellow { background: #febc2e; }
+.report-dot.green { background: #28c840; }
+
+.report-body {
+    padding: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    overflow-x: auto;
+}
+
+/* Tables inside report */
+.report-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+}
+
+.report-body th,
+.report-body td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.report-body th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+.report-body h2 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.75rem;
+    font-weight: 600;
+}
+
+.report-body h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem;
+    color: var(--text-muted);
+}
+
+.report-body blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0.75rem 0;
+}
+
+.report-body hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 1.5rem 0;
+}
+
+/* ─── FOOTER ──────────────────────────────────── */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}

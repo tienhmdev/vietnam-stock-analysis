@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vietnam-stock-analysis — AI Agent Skill</title>
+    <meta name="description" content="AI skill để phân tích kỹ thuật cổ phiếu Việt Nam. Tự động lấy dữ liệu thực và tạo báo cáo TA chuyên nghiệp bằng tiếng Việt.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- ─── HEADER ─────────────────────────────── -->
+    <header>
+        <div class="header-left">
+            <a href="https://github.com/tienhmdev/vietnam-stock-analysis" target="_blank" rel="noopener" aria-label="GitHub Repository">
+                <!-- GitHub SVG icon -->
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                github.com/tienhmdev
+            </a>
+        </div>
+        <div class="header-right">vietnam-stock-analysis</div>
+    </header>
+
+    <main>
+
+        <!-- ─── HERO / BANNER ──────────────────── -->
+        <section class="hero">
+            <h1>AI Skill phân tích kỹ thuật<br>chứng khoán Việt Nam</h1>
+            <p>Cài đặt một lần, phân tích mọi mã. Dữ liệu thực từ HOSE · HNX · UPCOM.</p>
+
+            <div class="install-box" id="install-cmd">
+                <span class="prompt">$</span>
+                <span class="cmd">npx skills add https://github.com/tienhmdev/vietnam-stock-analysis --skill vietnam-stock-analysis</span>
+                <button class="copy-btn" id="copy-btn" onclick="copyCmd()" title="Copy command">Copy</button>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- ─── SAMPLE REPORT ──────────────────── -->
+        <section class="sample-section">
+            <div class="sample-label">Sample report output</div>
+
+            <div class="report">
+                <div class="report-header">
+                    <span class="report-dot red"></span>
+                    <span class="report-dot yellow"></span>
+                    <span class="report-dot green"></span>
+                    &nbsp;&nbsp;reports/FPT_2026-03-15.md
+                </div>
+                <div class="report-body">
+
+                    <h2>📊 BÁO CÁO PHÂN TÍCH KỸ THUẬT</h2>
+                    <table>
+                        <tr><td><strong>Mã cổ phiếu</strong></td><td><strong>FPT</strong> — Công ty CP FPT</td></tr>
+                        <tr><td><strong>Sàn</strong></td><td>HOSE</td></tr>
+                        <tr><td><strong>Ngày phân tích</strong></td><td>2026-03-15</td></tr>
+                        <tr><td><strong>Giá đóng cửa</strong></td><td><strong>128,500 VNĐ</strong></td></tr>
+                        <tr><td><strong>52W High / Low</strong></td><td>142,000 / 95,200</td></tr>
+                    </table>
+
+                    <hr>
+
+                    <h2>1. 📈 Tổng Quan Xu Hướng</h2>
+                    <table>
+                        <thead><tr><th>Khung thời gian</th><th>Xu hướng</th><th>Tín hiệu</th><th>Ghi chú</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Ngắn hạn</strong></td><td>TĂNG</td><td>🟢</td><td>Giá trên MA5 (127,200) và MA20 (125,800)</td></tr>
+                            <tr><td><strong>Trung hạn</strong></td><td>ĐI NGANG</td><td>🟡</td><td>Gần MA50, đang tích lũy</td></tr>
+                            <tr><td><strong>Dài hạn</strong></td><td>TĂNG</td><td>🟢</td><td>Giá trên MA200 (118,500), bullish dài hạn</td></tr>
+                            <tr><td><strong>Overall</strong></td><td><strong>✅ BULLISH</strong></td><td>🟢🟢🟡</td><td>6/6 MA hỗ trợ</td></tr>
+                        </tbody>
+                    </table>
+                    <blockquote>Giá trên tất cả đường MA → xu hướng chính vẫn tăng. Giai đoạn tích lũy trước breakout.</blockquote>
+
+                    <hr>
+
+                    <h2>2. 🔍 Chỉ Số Kỹ Thuật</h2>
+
+                    <h3>📐 Moving Averages</h3>
+                    <table>
+                        <thead><tr><th>Đường MA</th><th>Giá trị</th><th>So với giá (128.50)</th><th>Trạng thái</th></tr></thead>
+                        <tbody>
+                            <tr><td>MA5</td><td>127.20</td><td>Giá <strong>trên</strong> MA</td><td>✅</td></tr>
+                            <tr><td>MA20</td><td>125.80</td><td>Giá <strong>trên</strong> MA</td><td>✅</td></tr>
+                            <tr><td>MA50</td><td>126.10</td><td>Giá <strong>trên</strong> MA</td><td>✅</td></tr>
+                            <tr><td>MA90</td><td>122.30</td><td>Giá <strong>trên</strong> MA</td><td>✅</td></tr>
+                            <tr><td>MA120</td><td>120.50</td><td>Giá <strong>trên</strong> MA</td><td>✅</td></tr>
+                            <tr><td>MA200</td><td>118.50</td><td>Giá <strong>trên</strong> MA</td><td>✅</td></tr>
+                        </tbody>
+                    </table>
+                    <blockquote>6/6 MA hỗ trợ ⟹ <strong>Full Bullish Alignment</strong> ✅</blockquote>
+
+                    <h3>📊 RSI &amp; MACD</h3>
+                    <table>
+                        <thead><tr><th>Chỉ số</th><th>Giá trị</th><th>Tín hiệu</th><th>Đánh giá</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>RSI (14)</strong></td><td><strong>58.3</strong></td><td>🟢 Trung tính</td><td>Còn dư địa tăng, chưa quá mua</td></tr>
+                            <tr><td><strong>MACD Line</strong></td><td>+1,850</td><td>🟢 Dương</td><td>Trên đường 0, bullish</td></tr>
+                            <tr><td><strong>Signal Line</strong></td><td>+1,420</td><td>🟢 Dương</td><td>MACD &gt; Signal → Mua</td></tr>
+                            <tr><td><strong>Histogram</strong></td><td>+430</td><td>🟢 Mở rộng</td><td>Momentum tăng đang <strong>mạnh lên</strong></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h3>MACD Histogram (10 phiên gần nhất)</h3>
+                    <table>
+                        <thead><tr><th>Ngày</th><th>Histogram</th><th>Visual</th></tr></thead>
+                        <tbody>
+                            <tr><td>10/03</td><td>+0.30</td><td>🟩🟩🟩🟩🟩🟩🟩🟩</td></tr>
+                            <tr><td>11/03</td><td>+0.35</td><td>🟩🟩🟩🟩🟩🟩🟩🟩🟩</td></tr>
+                            <tr><td>12/03</td><td>+0.40</td><td>🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩</td></tr>
+                            <tr><td>13/03</td><td>+0.42</td><td>🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩</td></tr>
+                            <tr><td><strong>15/03</strong></td><td><strong>+0.43</strong></td><td>🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 ★</td></tr>
+                        </tbody>
+                    </table>
+
+                    <hr>
+
+                    <h2>3. 🗺️ Vùng Hỗ Trợ &amp; Kháng Cự</h2>
+                    <table>
+                        <thead><tr><th>Mức giá</th><th>Loại</th><th>Mô tả</th><th>Khoảng cách</th></tr></thead>
+                        <tbody>
+                            <tr><td>142,000</td><td>🔵 52W High</td><td>Đỉnh lịch sử 52 tuần</td><td>+10.5%</td></tr>
+                            <tr><td>135,000</td><td>🔴 Kháng cự</td><td>Đỉnh tháng 2/2026</td><td>+5.1%</td></tr>
+                            <tr><td><strong>★ 128,500</strong></td><td>⭐ <strong>GIÁ HIỆN TẠI</strong></td><td>—</td><td><strong>—</strong></td></tr>
+                            <tr><td>126,100</td><td>🟠 MA50</td><td>Trung bình 50 phiên</td><td>-1.9%</td></tr>
+                            <tr><td>118,500</td><td>🟢 Hỗ trợ 2</td><td>MA200</td><td>-7.8%</td></tr>
+                        </tbody>
+                    </table>
+
+                    <hr>
+
+                    <h2>5. 💡 Nhận Định &amp; Khuyến Nghị</h2>
+                    <table>
+                        <thead><tr><th>Tiêu chí</th><th>Điểm</th><th>Đánh giá</th></tr></thead>
+                        <tbody>
+                            <tr><td>Xu hướng</td><td>⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜ <strong>8/10</strong></td><td>🟢 Bullish — trên tất cả MA</td></tr>
+                            <tr><td>Momentum</td><td>⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜ <strong>7/10</strong></td><td>🟢 MACD dương, RSI ok</td></tr>
+                            <tr><td>Dòng tiền</td><td>⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜ <strong>7/10</strong></td><td>🟢 Volume tăng dần</td></tr>
+                            <tr><td>Yếu tố ngoài</td><td>⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜ <strong>9/10</strong></td><td>🟢 Tin tức + khối ngoại cùng chiều</td></tr>
+                        </tbody>
+                    </table>
+
+                    <table>
+                        <thead><tr><th></th><th>Mục tiêu 1 🎯</th><th>Mục tiêu 2 🚀</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Vùng mua</strong></td><td>126,000 – 128,500</td><td>126,000 – 128,500</td></tr>
+                            <tr><td><strong>Chốt lời</strong></td><td><strong>135,000</strong> (+5.1%)</td><td><strong>142,000</strong> (+10.5%)</td></tr>
+                            <tr><td><strong>Cắt lỗ</strong></td><td><strong>123,000</strong> (-4.3%)</td><td><strong>120,000</strong> (-6.6%)</td></tr>
+                            <tr><td><strong>R:R Ratio</strong></td><td>1.2 : 1</td><td>1.6 : 1</td></tr>
+                        </tbody>
+                    </table>
+
+                    <blockquote>⚠️ Đây chỉ là phân tích kỹ thuật mang tính chất tham khảo, <strong>KHÔNG</strong> phải lời khuyên đầu tư tài chính.</blockquote>
+
+                </div><!-- .report-body -->
+            </div><!-- .report -->
+
+        </section>
+
+    </main>
+
+    <!-- ─── FOOTER ─────────────────────────────── -->
+    <footer>
+        &copy; 2026 <a href="https://github.com/tienhmdev" target="_blank" rel="noopener" style="color: inherit;">tienhmdev</a>. MIT License.
+    </footer>
+
+    <script>
+        function copyCmd() {
+            const cmd = 'npx skills add https://github.com/tienhmdev/vietnam-stock-analysis --skill vietnam-stock-analysis';
+            navigator.clipboard.writeText(cmd).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
